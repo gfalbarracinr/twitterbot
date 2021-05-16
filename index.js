@@ -19,7 +19,7 @@ function onAuthenticated(err) {
     }
 
     let stream = T.stream('statuses/filter', {
-        track:'@farydBot',
+        track:'@epacolombiabot',
         tweet_mode: 'extended'
     });
 
@@ -28,12 +28,12 @@ function onAuthenticated(err) {
 
 function isTweetExactMatch(text) {
     text = text.toLowerCase()
-    return text.includes('@farydbot')
+    return text.includes('@epacolombiabot')
 }
 
 function monitoringTweets(tweet) {
     console.log(tweet.text);
-    if(!tweet.retweeted_status && tweet.user.screen_name !== 'farydBot' && isTweetExactMatch(tweet.text)){        
+    if(!tweet.retweeted_status && tweet.user.screen_name !== 'epacolombiabot' && isTweetExactMatch(tweet.text)){        
         sendReply(tweet);
     }        
 }

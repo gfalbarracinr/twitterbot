@@ -17,11 +17,11 @@ function onAuthenticated(err) {
     }
 
     let stream = T.stream('statuses/filter', {
-        track:'@faryd_gracias',
+        track:'@iEpaOficial',
         tweet_mode: 'extended'
     });
 
-    getTweets('farydgracias');
+    getTweets('iEpaOficial');
 }
 
 function getTweets(user) {
